@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Customers</title><!-- Latest compiled and minified CSS -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <a href="/customer/sms" class="btn btn-info" role="button">전체 문자 보내기</a>
+        <a href="/customer/upload" class="btn btn-info" role="button">엑셀 업로드</a>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>전화번호</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if customers %}
+                {% for c in customers %}
+                <tr>
+                    <td>{{ c.name }}</td>
+                    <td>{{ c.phone_number }}</td>
+                </tr>
+                {% endfor %}
+                {% endif %}
+            </tbody>
+        </table>
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
