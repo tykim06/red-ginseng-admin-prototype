@@ -6,7 +6,36 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     </head>
     <body>
+        <div class="container">
+            <br>
+            <form action="http://127.0.0.1:8000/customer/upload/" method="post" enctype="multipart/form-data">
 
+                {% csrf_token %}
+
+                <input type="file" name="myfile" value="myfile">
+                <input type="submit" name="submit" value="submit">
+            </form>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <h1><br>엑셀 양식</h1>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>이름</th>
+                                <th>전화번호</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>김태엽</td>
+                                <td>010-1234-1234</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Popper JS -->

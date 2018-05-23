@@ -7,11 +7,11 @@
     </head>
     <body>
         <div class="container">
-            {{% if result %}}
+            {% if result %}
                 <h1>{{ result }}</h1>
-            {{% else %}}
+            {% else %}
                 <h1>완료 하였습니다.</h1>
-            {{% endif %}}
+            {% endif %}
             <a href="/customer" class="btn btn-info" role="button">확인</a>
         </div>
 
