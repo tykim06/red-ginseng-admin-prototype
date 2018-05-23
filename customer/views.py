@@ -25,8 +25,8 @@ def upload(req):
             customer_resource.import_data(dataset, dry_run=False)  # Actually import now
         return render(req, 'confirm.html', {'result' : "Excel Upload Done!"})
 
-def sms(req):
+def message(req):
     if req.method == 'GET':
-        return render(req, 'sms.html');
+        return render(req, 'message.html');
     elif req.method == 'POST':
         return render(req, 'confirm.html', {'result' : "Sending SMS Done!"})
